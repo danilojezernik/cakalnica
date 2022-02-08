@@ -2,28 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="style.css"/>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dodaj ime v dokument</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="modal.js"></script>
 </head>
 <body>
 
-<div class="container bg-light bg-gradient">
+<!-- The Modal -->
+<div id="mojModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Prosim, vpišite svoje ime</h5>
+            </div>
+            <div class="modal-body">
+                <p>Ime, ki ga bosate vpisali se bo prikazalo v pozdravu spletne strani:</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Kako vam je ime?" id="dodajIme">
+                    <button class="btn btn-outline-secondary rounded-0" type="button" onclick="vstaviIme(close())">
+                        Kliknite in nadaljujte
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The Modal END -->
+
+<div class="container bg-light bg-gradient  prihod">
     <div class="d-flex flex-sm-column bd-highlight mb-3">
-        <div class="p-2 bd-highlight">
-            <h1 class="text-center">Pozdravljeni v čakalnici Youtube</h1>
+        <div class="p-2 bd-highlight" id="dodanoIme">
+
+            <!---->
         </div>
     </div>
 </div>
 
-<div class="container mt-5 bg-light bg-gradient p-2">
+<div class="container mt-5 bg-light bg-gradient p-2 prihod">
     <div class="d-flex flex-sm-column bd-highlight mb-3 p-4">
         <div class="p-0 bd-highlight">
             <h5 class="text-center pb-3">Dodajte svoj video</h5>
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon3">https://www.youtube.com/watch?v=</span>
-                <input type="text" class="form-control rounded-0 border-bottom" placeholder="Vnesite ID videa" id="dodajId">
+                <input type="text" class="form-control rounded-0 border-bottom" placeholder="Vnesite ID videa"
+                       id="dodajId">
 
             </div>
             <div class="input-group mb-3">
@@ -53,9 +86,10 @@
 <div class="container mt-5 bg-light bg-gradient p-2 prihod">
     <div class="d-flex flex-column bd-highlight mb-3">
         <div class="p-2 bd-highlight"><h5 class=" text-center">Zgodovina opravljenih ogledov</h5></div>
-        <div class="p-2 bd-highlight"><div class="p-2 bd-highlight" id="opravljeno">
-            <!-- dodani opravljeni ogledi -->
-        </div>
+        <div class="p-2 bd-highlight">
+            <div class="p-2 bd-highlight" id="opravljeno">
+                <!-- dodani opravljeni ogledi -->
+            </div>
             <div class="p-2 bd-highlight text-center">
                 <button class="btn btn-outline-danger bg-gradient rounded-0" onclick="izbrisZgodovina()" type="button">
                     Izbriši vso zgodovino opravljenih ogledov
@@ -67,4 +101,5 @@
 
 </body>
 <script src="main.js"></script>
+
 </html>
