@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(184,76,76);
+}
+
+
+
+    /********************************
+    Animation with KeyFrame container
+    ********************************/
+
+.container {
+    animation: Prihod 1s ease 0s 1 normal forwards;
+}
+.prihod {
+    animation: prihod 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes prihod {
+    0% {
+        transform: rotateX(80deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*************************
+Animation with KeyFrame h1
+**************************/
+
+/* KeyFrame for h1 to do list*/
+
+@-webkit-keyframes animacija-h1 {
+    0% {
+        transform: scale(0);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+@keyframes animacija-h1 {
+    0% {
+        transform: scale(0);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+.animacija-h1 {
+    animation: animacija-h1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
