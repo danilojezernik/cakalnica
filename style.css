@@ -30,58 +30,53 @@ body {
     /********************************
     Animation with KeyFrame container
     ********************************/
-
-.container {
-    animation: Prihod 1s ease 0s 1 normal forwards;
-}
 .prihod {
-    animation: prihod 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: prihod 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @keyframes prihod {
     0% {
-        transform: rotateX(80deg);
+        transform: translateX(800px) rotateY(-30deg) scale(0);
+        transform-origin: -100% 50%;
         opacity: 0;
     }
     100% {
-        transform: rotateX(0);
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: -1800px 50%;
         opacity: 1;
     }
 }
 
+.prihod1 {
+    animation: prihod1 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
 
-/*************************
-Animation with KeyFrame h1
-**************************/
-
-/* KeyFrame for h1 to do list*/
-
-@-webkit-keyframes animacija-h1 {
+@keyframes prihod1 {
     0% {
-        transform: scale(0);
-        transform-origin: 100% 0%;
-        opacity: 1;
+        transform: translateX(800px) rotateY(-30deg) scale(0);
+        transform-origin: -100% 50%;
+        opacity: 0;
     }
     100% {
-        transform: scale(1);
-        transform-origin: 100% 0%;
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: -1800px 50%;
         opacity: 1;
     }
 }
-@keyframes animacija-h1 {
+
+.prihod2 {
+    animation: prihod2 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+@keyframes prihod2 {
     0% {
-        transform: scale(0);
-        transform-origin: 100% 0%;
-        opacity: 1;
+        transform: translateX(800px) rotateY(-30deg) scale(0);
+        transform-origin: -100% 50%;
+        opacity: 0;
     }
     100% {
-        transform: scale(1);
-        transform-origin: 100% 0%;
+        transform: translateX(0) rotateY(0) scale(1);
+        transform-origin: -1800px 50%;
         opacity: 1;
     }
 }
-
-.animacija-h1 {
-    animation: animacija-h1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-
