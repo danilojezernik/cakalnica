@@ -5,5 +5,6 @@ $(document).ready(function(){
 function vstaviIme() {
     let txt = document.getElementById("dodajIme").value;
     let element =  document.getElementById("dodanoIme");
-    element.innerHTML = `<h2 class="text-center py-2">Lepo pozdravljeni ${txt} v Youtube čakalnici!</h2>`;
+    element.innerHTML = `${txt}`;
+    document.getElementById("mojModal").innerHTML = "";
 }
